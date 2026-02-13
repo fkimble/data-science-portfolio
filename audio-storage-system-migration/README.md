@@ -1,6 +1,6 @@
 # Audio Storage System (Access → Oracle Migration)
 
-![](assets/cover.png)
+
 
 ## Project Overview
 This project simulates a real Access-to-Oracle migration workflow using a flat “Access export” table, then:
