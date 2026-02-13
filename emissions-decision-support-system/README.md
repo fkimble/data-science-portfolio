@@ -1,6 +1,5 @@
 # Emissions Decision Support System (Maryland)
 
-![](assets/cover.png)
 
 ## Project Overview
 This notebook-style project mirrors a real decision-support workflow: extract emissions records, clean inconsistent county/sector labels, standardize year ranges, and produce a modeling-ready dataset. The final step trains a baseline regression model to estimate emissions using county context (population/economic proxy) and sector.
