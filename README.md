@@ -28,6 +28,7 @@ The goal is not just to build models, but to structure data in a way that suppor
 - Data storytelling through structured analysis
 
 **Highlighted Projects(more coming)**
+
 Emissions Decision Support System
 
 Built an ETL pipeline to clean and standardize county-level emissions data. Performed trend analysis and implemented a Decision Tree regression model to estimate emissions based on socioeconomic factors. Exported cleaned data for reporting and dashboard integration.
