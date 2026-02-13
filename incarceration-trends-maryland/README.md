@@ -1,6 +1,6 @@
 # Incarceration Trends (Maryland)
 
-![](assets/cover.png)
+
 
 ## Project Overview
 This notebook explores incarceration and recidivism patterns across Maryland counties over time.
