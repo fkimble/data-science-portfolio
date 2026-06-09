@@ -5,4 +5,5 @@ __pycache__/
 .mypy_cache/
 .venv/
 data/*.csv
+care-route-equity-lab/data/referral_routes.csv
 claimflow-parity-lab/data/claimflow_events.csv

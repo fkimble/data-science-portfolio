@@ -17,6 +17,12 @@ All datasets in this repository are synthetic unless noted otherwise.
 
 ## Highlighted Projects
 
+### [CareRoute Equity Lab](care-route-equity-lab)
+
+Synthetic specialty-referral access analytics project. It detects referral leakage, wait-time drift, access-equity gaps, deferred visit value, and ranked operational interventions across patient segment, payer, geography, specialty, urgency, and network adequacy.
+
+**Analyst signal:** healthcare access analytics, referral leakage, wait-time operations, equity-gap analysis, intervention prioritization.
+
 ### [ClaimFlow Parity Lab](claimflow-parity-lab)
 
 Synthetic healthcare prior-authorization and claims-denial analytics project. It detects denial drift, access-parity gaps, reimbursement at risk, and ranked operational interventions. Includes CLI, tests, CI-ready package structure, sample reports, and SVG charts.
@@ -45,12 +51,13 @@ Synthetic Maryland incarceration and recidivism analysis. The upgraded version r
 
 ```text
 .
-├── audio-storage-system-migration/
-├── claimflow-parity-lab/
-├── emissions-decision-support-system/
-├── incarceration-trends-maryland/
-└── scripts/
-    └── build_portfolio_reports.py
+|-- audio-storage-system-migration/
+|-- care-route-equity-lab/
+|-- claimflow-parity-lab/
+|-- emissions-decision-support-system/
+|-- incarceration-trends-maryland/
+`-- scripts/
+    `-- build_portfolio_reports.py
 ```
 
 ## Reproducible Build
@@ -60,15 +67,17 @@ From the repository root:
 ```powershell
 python -m pip install pandas numpy
 python scripts/build_portfolio_reports.py
+$env:PYTHONPATH = "care-route-equity-lab"
+python -m unittest discover -s care-route-equity-lab/tests
 $env:PYTHONPATH = "claimflow-parity-lab"
 python -m unittest discover -s claimflow-parity-lab/tests
 ```
 
-The report builder regenerates the senior analyst artifacts under each existing project `reports/` folder.
+The report builder regenerates the senior analyst artifacts under the original project `reports/` folders. CareRoute and ClaimFlow also include their own CLI demos and committed sample outputs.
 
 ## Core Skills Represented
 
-- Python: pandas, NumPy, data validation, synthetic data generation
+- Python: pandas, NumPy, data validation, synthetic healthcare workflow generation
 - SQL/data modeling: Oracle-style schema design, reconciliation queries, 3NF thinking
 - Analytics: KPI definition, trend analysis, cohort/group comparisons, ranking models
 - Communication: executive summaries, metric dictionaries, dashboard specs, policy briefs

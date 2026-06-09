@@ -1,0 +1,8 @@
+metric,value,definition
+referral_volume,6000.0,all specialty referrals
+completion_rate,0.6908333333333333,completed appointments / all referrals
+leakage_rate,0.18716666666666668,leaked referrals / all referrals
+no_show_rate,0.10272708632355956,no-shows / non-leaked scheduled referrals
+median_wait_days,36.0,median referral-to-appointment wait
+long_wait_share,0.6515,referrals waiting more than 30 days
+deferred_visit_value,2097858.6399999997,expected value tied to leaked/no-show/long-wait referrals

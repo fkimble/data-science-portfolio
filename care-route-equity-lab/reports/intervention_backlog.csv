@@ -1,0 +1,6 @@
+intervention,target_issue,affected_referrals,expected_visit_value_at_risk,confidence_weight,impact_score
+Launch high-need reminder and transportation outreach workflow,no-show,501,279970.6,0.52,145584.71
+Open specialty fast-track slots for long-wait referrals,wait too long,394,180877.66,0.68,122996.81
+Add pre-visit authorization workqueue and SLA tracker,authorization friction,339,195774.03,0.55,107675.72
+Negotiate network exception pathway for high-leakage payers,payer network mismatch,100,53385.32,0.58,30963.49
+Create regional capacity-sharing queue for scarce specialties,no local capacity,72,46382.58,0.62,28757.2

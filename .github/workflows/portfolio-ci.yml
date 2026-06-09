@@ -18,5 +18,7 @@ jobs:
           pip install pandas numpy
       - name: Rebuild senior analyst reports
         run: python scripts/build_portfolio_reports.py
+      - name: Run CareRoute tests
+        run: PYTHONPATH=care-route-equity-lab python -m unittest discover -s care-route-equity-lab/tests
       - name: Run ClaimFlow tests
         run: PYTHONPATH=claimflow-parity-lab python -m unittest discover -s claimflow-parity-lab/tests
