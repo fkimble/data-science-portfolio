@@ -1,0 +1,9 @@
+feature,correlation_with_recidivism
+recidivism_rate_pct,1.0
+poverty_rate_pct,0.17
+social_risk_index,0.166
+incarceration_rate_per_100k,0.079
+violent_crime_rate_per_100k,0.038
+unemployment_rate_pct,-0.013
+college_education_pct,-0.099
+police_per_1k,-0.187

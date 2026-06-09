@@ -1,0 +1,5 @@
+intervention,denial_reason,avoidable_denials,reimbursement_at_risk,confidence_weight,impact_score
+Launch pre-submit documentation completeness checklist,documentation,226,272193.31,0.72,195979.18
+Add coding edit rules before claim submission,coding,189,221705.89,0.58,128589.42
+Automate eligibility refresh before service date,eligibility,155,191207.26,0.64,122372.65
+Create aging queue for claims near filing deadline,timely filing,147,184813.94,0.49,90558.83

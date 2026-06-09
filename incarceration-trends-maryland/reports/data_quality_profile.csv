@@ -1,0 +1,13 @@
+column,dtype,rows,missing,missing_pct,distinct_values,sample_value
+county,str,180,0,0.0,24,Baltimore
+year,int64,180,0,0.0,15,2010
+incarceration_rate_per_100k,float64,180,0,0.0,180,508.9854500238913
+recidivism_rate_pct,float64,180,0,0.0,180,43.65198817912634
+unemployment_rate_pct,float64,180,0,0.0,180,6.438815708700489
+poverty_rate_pct,float64,180,0,0.0,180,4.73740044403229
+college_education_pct,float64,180,0,0.0,180,58.53932558780448
+police_per_1k,float64,180,0,0.0,180,2.488220679022591
+violent_crime_rate_per_100k,float64,180,0,0.0,180,632.478583385404
+county_clean,str,180,0,0.0,12,Baltimore
+social_risk_index,float64,180,0,0.0,156,0.29027777777777775
+recidivism_gap_vs_state_avg,float64,180,0,0.0,180,2.5673529603620864

@@ -1,38 +1,61 @@
-# Audio Storage System (Access → Oracle Migration)
-
-
+# Audio Storage System Migration
 
 ## Project Overview
-This project simulates a real Access-to-Oracle migration workflow using a flat “Access export” table, then:
-1) cleans messy text fields,  
-2) normalizes the structure (3NF-style lookup tables), and  
-3) builds a regression model to estimate monthly storage cost from file metadata.
 
-The notebook is designed to be a portfolio piece you can demo quickly at a career fair.
+This project simulates a migration from a flat Microsoft Access audio-record export into an Oracle-style normalized schema. The upgraded version treats the migration like a controlled analytics/data-governance engagement, not just a notebook exercise.
+
+The analyst objective is to prove that the migration preserves record integrity, reduces reporting ambiguity, and creates a data model that can support storage-cost monitoring.
+
+## Business Questions
+
+- Did every Access export row survive the migration with a unique primary key?
+- Which departments own the largest storage and cost exposure?
+- Which storage tiers should be reviewed for cost optimization?
+- What reconciliation checks should run before stakeholders trust the Oracle target?
 
 ## Dataset
-This repo includes a synthetic Access export so everything runs end-to-end.
 
-### Data Dictionary (Access Export)
+The project uses a synthetic Access export so the workflow runs end to end without private data.
+
 | Column | Meaning |
-|---|---|
-| record_id | Unique record identifier |
-| file_name | Audio file name |
-| department | Owning department (messy strings included intentionally) |
-| recording_type | Category (incident, training, etc.) |
-| duration_sec | Recording duration in seconds |
-| sample_rate_hz | Sample rate (Hz) |
-| channels | Mono/Stereo (1/2) |
-| created_date | Record creation date |
-| created_by | Creator role |
-| file_size_mb | Estimated file size |
-| storage_tier | Standard / Infrequent / Archive |
-| storage_cost_usd_month | Estimated monthly storage cost **target** |
+| --- | --- |
+| `record_id` | Unique source record identifier |
+| `file_name` | Audio file name |
+| `department` | Owning department with intentional messy labels |
+| `recording_type` | Recording category |
+| `duration_sec` | Duration in seconds |
+| `sample_rate_hz` | Sample rate |
+| `channels` | Mono/stereo count |
+| `created_date` | Source creation date |
+| `created_by` | Creator role |
+| `file_size_mb` | File size |
+| `storage_tier` | Standard, infrequent, or archive |
+| `storage_cost_usd_month` | Modeled monthly storage cost |
 
-## What’s inside
-- `notebooks/01_audio_migration_etl_model.ipynb` — ETL, normalization, EDA, model
-- `schema/normalized_schema.sql` — example normalized schema
-- `reports/` — cleaned + normalized outputs produced by the notebook
+## Senior Analyst Deliverables
 
-## How to run
-Open the notebook and run all cells. Requires: pandas, numpy, matplotlib, seaborn, scikit-learn, scipy.
+- [Executive summary](reports/EXECUTIVE_SUMMARY.md)
+- [Metric dictionary](reports/METRIC_DICTIONARY.md)
+- [Data quality profile](reports/data_quality_profile.csv)
+- [Migration control totals](reports/migration_control_totals.csv)
+- [Department storage risk table](reports/department_storage_risk.csv)
+- [Storage-tier summary](reports/storage_tier_summary.csv)
+- [Normalized schema](schema/normalized_schema.sql)
+- [Reconciliation SQL](schema/senior_reconciliation_queries.sql)
+
+## Key Readout
+
+- 1,500 source records reconcile to 1,500 unique record IDs.
+- Standardized department and recording-type labels create governed reporting dimensions.
+- Department-level storage exposure and archive-share metrics create a practical cost-review queue.
+- Reconciliation SQL gives the project an audit trail a data migration lead would expect.
+
+## How to Run
+
+From the portfolio root:
+
+```powershell
+python scripts/build_portfolio_reports.py
+```
+
+The original notebook remains in `notebooks/`, while the `reports/` folder contains the senior analyst outputs.

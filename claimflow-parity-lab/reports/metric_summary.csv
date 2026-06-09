@@ -1,0 +1,8 @@
+metric,value,definition
+claim_volume,5000.0,completed authorization-to-claim workflows
+denial_rate,0.1884,denied claims / all claims
+avoidable_denial_share,0.7611464968152867,avoidable denials / denied claims
+appeal_rate,0.30254777070063693,appealed denials / denied claims
+overturn_rate,0.39649122807017545,overturned appeals / appealed denials
+median_cycle_days,26.0,median days from request to finalized claim
+denied_reimbursement_at_risk,1166370.9,expected reimbursement attached to denied claims

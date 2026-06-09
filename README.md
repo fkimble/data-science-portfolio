@@ -1,62 +1,79 @@
-# Data-Science-Portfolio
+# Data Science Portfolio
 
-Data Science Portfolio
+This portfolio is a curated set of analytics and data-systems projects focused on healthcare, civic operations, public-sector decision support, and database migration. The projects are intentionally framed as end-to-end analyst work: define the decision, validate the data, produce metrics, communicate findings, and package outputs a stakeholder could actually use.
 
-A curated collection of data science and analytics projects completed during my undergraduate studies. These projects reflect hands-on experience in data cleaning, exploratory analysis, database design, predictive modeling, and decision-support workflows.
+## Portfolio Positioning
 
-**What This Portfolio Demonstrates**
+I use this repository to demonstrate a mid-senior data analyst workflow:
 
-Across these projects, I focus on building complete, end-to-end workflows rather than isolated scripts. Each project typically includes:
+- translating messy operational data into decision-ready metrics
+- building reproducible cleaning, validation, and reporting pipelines
+- defining KPI dictionaries and dashboard specs
+- separating descriptive analysis from unsupported causal claims
+- creating executive summaries, risk rankings, and recommendation backlogs
+- using Python, SQL thinking, and data storytelling together
 
-- Data extraction and preprocessing (ETL)
-- Cleaning and standardizing inconsistent or messy datasets
-- Exploratory data analysis with visualizations
-- Feature engineering and encoding
-- Predictive modeling with evaluation metrics
-- Exportable outputs for reporting or stakeholder use
+All datasets in this repository are synthetic unless noted otherwise.
 
-The goal is not just to build models, but to structure data in a way that supports clear decision-making.
+## Highlighted Projects
 
-**Core Skills Represented**
+### [ClaimFlow Parity Lab](claimflow-parity-lab)
 
-- Python (pandas, NumPy, scikit-learn, matplotlib, seaborn)
-- SQL and relational database design
-- Data normalization (up to 3NF)
-- Feature engineering and correlation analysis
-- Model training, hyperparameter tuning (GridSearchCV)
-- Performance evaluation (R², MAE, RMSE)
-- Data storytelling through structured analysis
+Synthetic healthcare prior-authorization and claims-denial analytics project. It detects denial drift, access-parity gaps, reimbursement at risk, and ranked operational interventions. Includes CLI, tests, CI-ready package structure, sample reports, and SVG charts.
 
-**Highlighted Projects(more coming)**
+**Analyst signal:** healthcare operations analytics, KPI design, synthetic data generation, validation, parity analysis, executive reporting.
 
-Emissions Decision Support System
+### [Audio Storage System Migration](audio-storage-system-migration)
 
-Built an ETL pipeline to clean and standardize county-level emissions data. Performed trend analysis and implemented a Decision Tree regression model to estimate emissions based on socioeconomic factors. Exported cleaned data for reporting and dashboard integration.
+Access-to-Oracle migration simulation for audio records. The upgraded version includes row-level migration controls, normalized schema design, department-level storage exposure, storage-tier cost review, reconciliation SQL, and executive migration reporting.
 
-Audio Storage System Migration
+**Analyst signal:** data migration controls, SQL schema design, 3NF normalization, data quality, operational cost analysis.
 
-Simulated a migration from a flat Microsoft Access export to a normalized Oracle-style schema. Applied 3NF normalization techniques to reduce redundancy and built a regression model to estimate storage costs based on file metadata.
+### [Emissions Decision Support System](emissions-decision-support-system)
 
-Incarceration Trends Analysis
+Maryland county emissions analysis for decision support. The upgraded version includes county/sector standardization, emissions intensity metrics, priority ranking, yearly trend outputs, metric dictionary, and Power BI dashboard specification.
 
-Analyzed county-level incarceration and recidivism data. Conducted correlation analysis to explore relationships between incarceration rates and socioeconomic indicators. Built a predictive model to estimate recidivism rates and evaluated feature importance for interpretability.
+**Analyst signal:** public-sector analytics, KPI normalization, dashboard design, data governance, stakeholder recommendations.
 
-**Approach**
+### [Incarceration Trends Maryland](incarceration-trends-maryland)
 
-1. My work emphasizes structured problem-solving:
+Synthetic Maryland incarceration and recidivism analysis. The upgraded version reframes the notebook as a public-sector reentry analytics brief, with county priority ranking, risk-index definitions, driver correlations, policy guardrails, and a policy brief.
 
-2. Understand the business or policy question.
+**Analyst signal:** civic analytics, policy-safe interpretation, correlation guardrails, risk segmentation, executive communication.
 
-3. Clean and validate the data.
+## Repository Structure
 
-4. Explore patterns and relationships.
+```text
+.
+├── audio-storage-system-migration/
+├── claimflow-parity-lab/
+├── emissions-decision-support-system/
+├── incarceration-trends-maryland/
+└── scripts/
+    └── build_portfolio_reports.py
+```
 
-5. Build a baseline model.
+## Reproducible Build
 
-6. Evaluate and interpret results.
+From the repository root:
 
-7. Deliver outputs that are usable by non-technical stakeholders.
+```powershell
+python -m pip install pandas numpy
+python scripts/build_portfolio_reports.py
+$env:PYTHONPATH = "claimflow-parity-lab"
+python -m unittest discover -s claimflow-parity-lab/tests
+```
 
-**Purpose**
+The report builder regenerates the senior analyst artifacts under each existing project `reports/` folder.
 
-This repository represents my growth as a data practitioner and my ability to connect technical analysis with real-world impact. I am particularly interested in roles at the intersection of analytics, database systems, and applied machine learning.
+## Core Skills Represented
+
+- Python: pandas, NumPy, data validation, synthetic data generation
+- SQL/data modeling: Oracle-style schema design, reconciliation queries, 3NF thinking
+- Analytics: KPI definition, trend analysis, cohort/group comparisons, ranking models
+- Communication: executive summaries, metric dictionaries, dashboard specs, policy briefs
+- Data governance: control totals, label standardization, quality profiles, interpretation guardrails
+
+## Purpose
+
+This portfolio is meant to show that I can go beyond isolated notebooks and build decision-support assets: the kind of analysis package a stakeholder, manager, or technical reviewer can understand, audit, and reuse.

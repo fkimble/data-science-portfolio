@@ -1,0 +1,17 @@
+column,dtype,rows,missing,missing_pct,distinct_values,sample_value
+record_id,int64,1500,0,0.0,1500,1
+file_name,str,1500,0,0.0,1500,rec_00001.aac
+department,str,1500,0,0.0,11,ResLife
+recording_type,str,1500,0,0.0,5,Training
+duration_sec,int64,1500,0,0.0,1366,4473
+sample_rate_hz,int64,1500,0,0.0,4,44100
+channels,int64,1500,0,0.0,2,1
+created_date,datetime64[us],1500,0,0.0,120,2024-12-19 00:00:00
+created_by,str,1500,0,0.0,4,staff
+file_size_mb,float64,1500,0,0.0,1500,97.33601031426927
+storage_tier,str,1500,0,0.0,3,Standard
+storage_cost_usd_month,float64,1500,0,0.0,1500,0.0023708725301506
+department_clean,str,1500,0,0.0,6,Reslife
+recording_type_clean,str,1500,0,0.0,5,Training
+duration_hours,float64,1500,0,0.0,1366,1.2425
+cost_per_gb_month,float64,1500,0,0.0,1500,0.024942192134603112

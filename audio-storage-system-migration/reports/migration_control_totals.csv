@@ -1,0 +1,8 @@
+control,value
+source_rows,1500.0
+unique_record_ids,1500.0
+duplicate_record_ids,0.0
+departments_after_standardization,6.0
+recording_types_after_standardization,5.0
+total_storage_gb,93.24
+monthly_storage_cost_usd,1.8582

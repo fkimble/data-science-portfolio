@@ -1,0 +1,11 @@
+column,dtype,rows,missing,missing_pct,distinct_values,sample_value
+county,str,600,0,0.0,46,BALTIMORE
+year,int64,600,0,0.0,10,2015
+sector,str,600,0,0.0,8,Transportation
+emissions_mtco2e,float64,600,0,0.0,600,1372.7983740766958
+population,float64,600,0,0.0,100,168006.41489156705
+gdp_billions_usd,float64,600,0,0.0,100,33.31922137404609
+county_clean,str,600,0,0.0,10,Baltimore
+sector_clean,str,600,0,0.0,7,Transportation
+emissions_per_capita,float64,600,0,0.0,600,0.008171106888762034
+emissions_per_gdp_billion,float64,600,0,0.0,600,41.20139419422428

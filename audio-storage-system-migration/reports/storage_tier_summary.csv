@@ -1,0 +1,4 @@
+storage_tier,records,storage_gb,monthly_cost
+Standard,1060,67.16,1.5461
+Infrequent,293,17.65,0.2442
+Archive,147,8.43,0.0679

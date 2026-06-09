@@ -1,0 +1,8 @@
+sector_clean,records,total_emissions,avg_emissions
+Transportation,93,198049.09,2129.56
+Industrial,100,154549.09,1545.49
+Residential,100,119709.08,1197.09
+Commercial,100,99094.41,990.94
+Agriculture,100,53891.87,538.92
+Waste,100,44379.86,443.8
+Transport,7,16321.65,2331.66
